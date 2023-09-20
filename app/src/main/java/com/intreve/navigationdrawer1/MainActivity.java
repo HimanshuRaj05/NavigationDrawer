@@ -5,6 +5,8 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -49,12 +51,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // Handle navigation item clicks here
         switch (item.getItemId()) {
             case R.id.home:
-                Toast.makeText(MainActivity.this , "Home selected", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this , "Home selected", Toast.LENGTH_SHORT).show();
+                Intent intent= new Intent(MainActivity.this, HomeActivity.class);
+                startActivity(intent);
                 // Add code to navigate to the "Home" screen if desired.
                 break;
 
             case R.id.about:
-                Toast.makeText(this, "About selected", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, "About selected", Toast.LENGTH_SHORT).show();
+                Intent intent1=new Intent(MainActivity.this, AboutActivity.class);
+                startActivity(intent1);
                 // Add code to navigate to the "About" screen if desired.
                 break;
         }
